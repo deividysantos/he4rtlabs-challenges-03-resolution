@@ -1,0 +1,54 @@
+.register{
+    color: white;
+    background-color: var(--registerColor);
+}
+
+.register .contentRegister{
+    border: 4px solid white;
+    padding: 15px;
+}
+
+.register header h1{
+    margin: 0;
+    font-weight: 500;
+}
+
+.register main{
+    display: flex;
+    flex-direction: column;
+}
+
+.register footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.register footer p{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.register footer .redirectToLogin{
+    border-bottom: 1px solid white;
+}
+
+.register footer .redirectToLogin:hover{
+    cursor: pointer;
+    color: black;
+}
+
+.register footer .submit{
+    background-color: white;
+    border: 1px solid white;
+    color: black;
+    padding: 7px 10px;
+    border-radius: 15px;
+}
+
+.register footer .submit:hover{
+    background-color: var(--registerColor);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}

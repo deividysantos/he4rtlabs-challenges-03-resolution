@@ -1,0 +1,64 @@
+@import url('../css/login.css');
+@import url('../css/register.css');
+@import url('components/input.css');
+
+:root {
+    --registerColor: rgb(142,95,198);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+  
+html, body{
+    height: 100vh;
+    font-family: 'Fredoka', sans-serif;
+    background-color: white;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper header, main, footer{
+    width: 450px;
+}
+
+.onTop{
+    z-index: 2;
+}
+
+.animate-switch-form-bottom {
+    animation: switch-form-bottom 0.6s ease-in-out both;
+}
+  
+@keyframes switch-form-bottom {
+    from {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%);
+    }
+}
+
+.animate-switch-form-top {
+    animation: switch-form-top 0.6s ease-in-out both ;
+}
+
+@keyframes switch-form-top {
+    from {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);  
+    }
+
+    to {
+        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+    }
+}
