@@ -13,7 +13,7 @@ export const login=`
         
         <footer>
             <p>Não possui conta? Clique <a class="redirectToRegister">aqui</a></p>
-            <button class="submit" type="submit">Entrar</button>
+            <button id="btnLogin" type="reset" class="submit" >Entrar</button>
         </footer>
     </div>
 </form>
@@ -35,8 +35,15 @@ export const register =`
         
         <footer>
             <p>Possui uma conta? Clique <a class="redirectToLogin">aqui</a></p>
-            <button class="submit" type="submit">Registrar</button>
+            <button id="btnRegister" type="reset" class="submit">Registrar</button>
         </footer>
     </div>
 </form>
+`
+
+export const welcome = `
+    <div class="welcome">
+        
+    </div>
+
 `

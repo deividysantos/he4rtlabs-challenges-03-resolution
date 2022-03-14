@@ -1,4 +1,6 @@
-function Register()
+import { login, register, welcome } from './components.js' 
+
+function registerPage()
 {      
     document.querySelector('.onTop').classList.add('animate-switch-form-top');
 
@@ -9,7 +11,7 @@ function Register()
     }, 600);
 }
 
-function Login() 
+function loginPage() 
 {   
     document.querySelector('.onTop').classList.add('animate-switch-form-bottom');
 
@@ -20,7 +22,20 @@ function Login()
     }, 600);
 }
 
+function welcomePage()
+{
+    let app = document.querySelector('.app');    
+    app.innerHTML = welcome;
+    let welcomezada = document.querySelector('.welcome')
+    welcomezada.classList.add('animate-welcome')
+
+    setTimeout(function(){
+        welcomezada.innerHTML = '<h1>Hello He4rt</h1>'
+    }, 150);
+}
+
 export default{
-    Register,
-    Login
+    registerPage,
+    loginPage,
+    welcomePage
 }

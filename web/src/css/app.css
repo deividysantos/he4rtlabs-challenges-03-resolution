@@ -1,6 +1,7 @@
-@import url('../css/login.css');
-@import url('../css/register.css');
+@import url('login.css');
+@import url('register.css');
 @import url('components/input.css');
+@import url('welcome.css');
 
 :root {
     --registerColor: rgb(142,95,198);
@@ -60,5 +61,20 @@ html, body{
 
     to {
         clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+    }
+}
+
+.animate-welcome{
+    animation: welcome 0.9s reverse linear both ;
+}
+
+@keyframes welcome {
+    from{
+        
+        clip-path: circle(70.7% at 50% 50%);
+    }
+
+    to{
+        clip-path: circle(0.0% at 51% 50%);
     }
 }

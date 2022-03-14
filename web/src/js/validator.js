@@ -1,24 +1,40 @@
 function email(event){
-    var isEmail = /\S+@\S+\.\S+/;
-    
+
     const email = document.getElementById(event.currentTarget.id);
 
-    if(!isEmail.test(event.target.value))
+    if( !emailIsValid(email) ){
         email.classList.add('error');
-    else
-        email.classList.remove('error');   
+        return 
+    }    
+    
+    email.classList.remove('error');
 }
 
 function password(event){
     const password = document.getElementById(event.currentTarget.id);
 
-    if( password.value.trim().length < 8 )
+    if( !passwordIsValid(password) ){
         password.classList.add('error');
-    else
+        return 
+    }
+        
     password.classList.remove('error');
+}
+
+function emailIsValid(email){
+    
+    var isEmail = /\S+@\S+\.\S+/;
+
+    return isEmail.test(email.value)
+}
+
+function passwordIsValid(password){
+    return password.value.trim().length >= 8
 }
 
 export default {
     email,
-    password
+    password,
+    emailIsValid,
+    passwordIsValid
 }
