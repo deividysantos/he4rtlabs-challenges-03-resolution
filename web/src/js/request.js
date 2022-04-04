@@ -42,27 +42,24 @@ function register(event){
         const body = {
             email: email.value,
             password: password.value
-        }
+        };
     
         axios.post(url, body)
         .then(response => {
             if(response.data.message){
-                render.login();
+                render.loginPage();
                 setTimeout(() => {
                     email.value = '';
                     password.value = '';
                 }, 600)
             }
         })
-        .catch(error => console.log('error.response.data') );
+        .catch(error => console.log(error));
 }
 
 function verifyInpust(email, password)
 {
-    if(validator.emailIsValid(email) && validator.passwordIsValid(password))
-        return true;
-
-    return false;
+    return validator.emailIsValid(email) && validator.passwordIsValid(password);
 }
 
 export default{
